@@ -94,7 +94,7 @@
         "name": "Java",
         "category": "Language",
         "description": "A widely used object-oriented programming language for web, enterprise, desktop, and backend applications.",
-        "icon": "https://cdn.simpleicons.org/java",
+         "icon": "https://svgicons.com/img/26033/java.svg",
         "rating": 4.7,
         "difficulty": "Intermediate",
         "badge": "Popular"

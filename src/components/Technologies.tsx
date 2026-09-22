@@ -1,18 +1,41 @@
-import React from "react";
+import { use } from "react";
+import type { ITechnology } from "../Types/Types";
+import TechnologiesCard from "./TechnologiesCard";
 
-const Technologies = () => {
+interface ITechnologiesProps {
+  technologiesPromise: Promise<ITechnology[]>;
+  technologies: ITechnology;
+}
+
+const Technologies = ({ technologiesPromise }: ITechnologiesProps) => {
+  const technologies = use(technologiesPromise);
   return (
-    <div>
-      <h1 className="text-4xl font-extrabold leading-tight text-black sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
-        Explore the 
-        <span className="bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-          Technologies
-        </span>
-      </h1>
+    <div className=" container mx-auto">
+      <div className="pb-12 space-y-2">
+        <h1 className="font-extrabold text-4xl">
+          Explore the
+          <span className="bg-linear-to-r ml-1.5 from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent ">
+            Technologies
+          </span>
+        </h1>
 
-      <p className="mx-auto max-w-2xl text-base font-medium leading-7 text-gray-600 sm:text-[16] lg:mx-0">
-        Pick one technology per category to build your ideal stack.
-      </p>
+        <p className="mx-auto max-w-2xl text-md font-medium  leading-7 text-gray-500 sm:text-[16] lg:mx-0">
+          Pick one technology per category to build your ideal stack.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-3 gap-4">
+        {technologies.map((technoloy) => {
+          return (
+           
+           
+              <TechnologiesCard technoloy={technoloy}  />
+           
+            
+           
+          );
+        })}
+      </div>
     </div>
   );
 };

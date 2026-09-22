@@ -1,4 +1,4 @@
-type Category =  "Frontend"
+export type Category =  "Frontend"
     | "Backend"
     | "Database"
     | "Language"
@@ -6,9 +6,9 @@ type Category =  "Frontend"
     | "DevOps"
     | "Tools";
 
-type Difficulty = "Beginner-Friendly" | "Intermediate" | "Advanced"
+export type Difficulty = "Beginner-Friendly" | "Intermediate" | "Advanced"
 
-interface Technology {
+export  interface ITechnology {
   id: number;
   name: string;
   category: Category

@@ -2,7 +2,7 @@ import banner from "./assets/banner-stack.png";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-10 px-5 py-12 sm:px-8 sm:py-16 md:gap-12 md:py-20 lg:flex-row lg:px-10 lg:py-24">
+    <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-10 px-3 py-12 sm:px-8 sm:py-16 md:gap-12 md:py-20 lg:flex-row lg:px-10 lg:py-24">
       {/* Banner text */}
       <div className="w-full space-y-6 text-center lg:w-1/2 lg:text-left">
         <h1 className="text-4xl font-extrabold leading-tight text-black sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
