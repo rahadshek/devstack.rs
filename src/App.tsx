@@ -13,21 +13,34 @@ const technologiesFetch = async (): Promise<ITechnology[]> => {
 
 function App() {
   const technologiesPromise = technologiesFetch();
+
   return (
     <>
+      {/* Navbar */}
       <Nave />
+
+      {/* Banner */}
       <Banner />
-      <Suspense
-        fallback={
-          <div className="flex  items-center">
-            <h2 className="font-extrabold text-md">Loading</h2>
-            <span className="loading loading-dots loading-xl"></span>
-          </div>
-        }
-      >
-        <Technoloy technologiesPromise={technologiesPromise} />
-      </Suspense>
-      <Footer/>
+
+      {/* Technologies */}
+      <main className="container mx-auto px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+        <Suspense
+          fallback={
+            <div className="flex min-h-[200px] items-center justify-center gap-2">
+              <h2 className="text-sm font-extrabold sm:text-base md:text-lg">
+                Loading
+              </h2>
+
+              <span className="loading loading-dots loading-md sm:loading-lg"></span>
+            </div>
+          }
+        >
+          <Technoloy technologiesPromise={technologiesPromise} />
+        </Suspense>
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
