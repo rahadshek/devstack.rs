@@ -26,7 +26,7 @@ function App() {
       <main className="container mx-auto px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
         <Suspense
           fallback={
-            <div className="flex min-h-[200px] items-center justify-center gap-2">
+            <div className="flex min-h-[200px] items-center  gap-2">
               <h2 className="text-sm font-extrabold sm:text-base md:text-lg">
                 Loading
               </h2>

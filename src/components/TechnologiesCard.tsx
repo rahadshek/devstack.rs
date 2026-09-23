@@ -27,7 +27,7 @@ const TechnologiesCard = ({
 
   return (
     <div
-      className={`m-1 space-y-3 rounded-2xl bg-base-100 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:m-2 sm:p-5 lg:p-6 ${
+      className={`space-y-3 rounded-2xl bg-base-100 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5 lg:p-6 ${
         isButtonType ? "border-2 border-pink-500" : "border border-gray-200"
       }`}
     >
