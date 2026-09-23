@@ -1,11 +1,10 @@
 import { Suspense } from "react";
 import Banner from "./Banner";
 import Nave from "./Nave";
-import Technologies from "./components/Technologies";
-import type { ITechnology } from "./Types/Types"
+import type { ITechnology } from "./Types/Types";
+import Technoloy from "./components/Technoloy";
 
-
-const technologiesFetch = async ():Promise <ITechnology[]> => {
+const technologiesFetch = async (): Promise<ITechnology[]> => {
   const res = await fetch("/data.json");
   const data = await res.json();
   return data;
@@ -25,7 +24,7 @@ function App() {
           </div>
         }
       >
-        <Technologies technologiesPromise ={technologiesPromise} />
+        <Technoloy technologiesPromise={technologiesPromise} />
       </Suspense>
     </>
   );

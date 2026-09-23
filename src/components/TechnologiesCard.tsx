@@ -1,10 +1,9 @@
-
 import type { ITechnology } from "../Types/Types";
 
-const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
+const TechnologiesCard = ({ technology }: { technology: ITechnology }) => {
+  
   return (
     <div
-      
       className="
     card
     m-2
@@ -24,8 +23,8 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
       {/* Icon + Badge */}
       <figure className="flex items-center justify-between gap-3">
         <img
-          src={technoloy.icon}
-          alt={technoloy.name}
+          src={technology.icon}
+          alt={technology.name}
           className="
         h-12 w-20
         object-contain
@@ -48,7 +47,7 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
         sm:text-sm
       "
         >
-          {technoloy.badge}
+          {technology.badge}
         </h2>
       </figure>
 
@@ -63,7 +62,7 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
         sm:text-3xl
       "
         >
-          {technoloy.name}
+          {technology.name}
         </h2>
 
         {/* Description */}
@@ -77,7 +76,7 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
         lg:text-lg
       "
         >
-          {technoloy.description}
+          {technology.description}
         </p>
 
         {/* Divider */}
@@ -97,7 +96,7 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
           {/* Category */}
           <h3
             className="
-          rounded-full
+          rounded-md
           bg-[#f4f7fa]
           px-3 py-1
           text-xs font-medium
@@ -106,32 +105,26 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
           sm:text-sm
         "
           >
-            {technoloy.category}
+            {technology.category}
           </h3>
 
           {/* Difficulty */}
           <h3
-            className="
-          rounded-full
-          border border-purple-100
-          bg-purple-50
+            className="       
           px-3 py-1
           text-xs font-medium
-          text-purple-600
+          text-gray-400
           sm:px-4 sm:py-1.5
           sm:text-sm
         "
           >
-            {technoloy.difficulty}
+            {technology.difficulty}
           </h3>
 
           {/* Rating */}
           <h3
             className="
           flex items-center gap-1
-          rounded-full
-          border border-yellow-200
-          bg-yellow-50
           px-3 py-1
           text-xs font-semibold
           text-gray-700
@@ -140,7 +133,7 @@ const TechnologiesCard = ({technoloy}:{technoloy:ITechnology}) => {
         "
           >
             <span className="text-yellow-500">★</span>
-            {technoloy.rating}
+            {technology.rating}
           </h3>
         </div>
 
