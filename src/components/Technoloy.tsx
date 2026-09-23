@@ -1,4 +1,4 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { ITechnology } from "../Types/Types";
 import Technologies from "./Technologies";
 import StockTechnologies from "./StockTechnologies";
@@ -9,6 +9,8 @@ interface ITechnoloyProps {
 
 const Technoloy = ({ technologiesPromise }: ITechnoloyProps) => {
   const Technoloy = use(technologiesPromise);
+
+  const [Added,setAdded] = useState<ITechnology[]>([])
   return (
     <div className=" container mx-auto">
       <div className="pb-12 space-y-2">
@@ -27,12 +29,12 @@ const Technoloy = ({ technologiesPromise }: ITechnoloyProps) => {
 
       <div className=" grid grid-cols-12 gap-4">
       <div className="col-span-9">
-        <Technologies technologies={Technoloy} /> 
+        <Technologies technologies={Technoloy} Added={Added} setAdded={setAdded}/> 
       </div>
       
 
       <div className="col-span-3">
-        <StockTechnologies />
+        <StockTechnologies  Added={Added} setAdded={setAdded} />
       </div>
       </div>
       
