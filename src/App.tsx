@@ -18,8 +18,8 @@ function App() {
       <Banner />
       <Suspense
         fallback={
-          <div>
-            <h2>Loading</h2>
+          <div className="flex  items-center">
+            <h2 className="font-extrabold text-md">Loading</h2>
             <span className="loading loading-dots loading-xl"></span>
           </div>
         }

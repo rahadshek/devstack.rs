@@ -1,7 +1,15 @@
+import { useState } from "react";
 import type { ITechnology } from "../Types/Types";
 
 const TechnologiesCard = ({ technology }: { technology: ITechnology }) => {
   
+  const [isButtonType,setIsButtonType] = useState(false)
+
+  const handleAddtoButType = () => {
+    if(isButtonType=== true) {
+      return 
+    }
+  } 
   return (
     <div
       className="
